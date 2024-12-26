@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Swiper Navigation Styles */
+.swiper-button-prev,
+.swiper-button-next {
+  @apply w-12 h-12 bg-black/20 backdrop-blur-sm rounded-full transition-all duration-300 !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  @apply bg-black/40 !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-white/80 text-xl !important;
+}
+
+/* Make navigation buttons more visible in light mode */
+.light-mode .swiper-button-prev,
+.light-mode .swiper-button-next {
+  @apply bg-white/20 !important;
+}
+
+.light-mode .swiper-button-prev:hover,
+.light-mode .swiper-button-next:hover {
+  @apply bg-white/40 !important;
+}
+
+.light-mode .swiper-button-prev::after,
+.light-mode .swiper-button-next::after {
+  @apply text-gray-800/80 !important;
+}
+
+/* Pagination Bullets */
+.swiper-pagination-bullet {
+  @apply bg-white/50 !important;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-white !important;
+}
+
+.light-mode .swiper-pagination-bullet {
+  @apply bg-gray-400/50 !important;
+}
+
+.light-mode .swiper-pagination-bullet-active {
+  @apply bg-gray-800 !important;
+}
